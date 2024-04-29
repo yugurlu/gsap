@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
+  cursor: none;
+}
+
+body {
+  width: 100%;
+  height: 500vh;
+  background: #000;
+  font-family: Suisseintl, sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  margin: 0.25em 0;
+  font-size: 80px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+p {
+  letter-spacing: -0.015em;
+  font-size: 3.4vw;
+  line-height: 1.25;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.cursor {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.08s ease-out;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 175%;
+}
+
+.logo a {
+  font-size: 28px;
+}
+
+.lottie-container .animation {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: -1;
+  filter: saturate(2);
+}
+
+.animation:after {
+  content: "";
+  z-index: 2147483647;
+  opacity: 0.05;
+  background-image: url(https://assets-global.website-files.com/651d15fb8f27f4a03c14ae88/651d15fb8f27f4a03c14afa4_5d8424ac4ffed73f4d72846e_5c06f51d6e75c933fe05c728_giphy.gif);
+  background-position: 0 0;
+  background-attachment: fixed;
+  position: fixed;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.gradient {
+  width: 200vw;
+  height: 200vh;
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  z-index: 1;
+}
+
+
+
+.website-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25em;
+  position: relative;
+  width: 100%;
+  padding: 2em;
+  background-color: #000;
+  color: #fff;
+  z-index: 1;
+}
+
+.end-lottie {
+  position: absolute;
+  top: 100vh;
+  width: 100%;
+  height: 1px;
+}
+
+@keyframes animateGrain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, -20%);
+  }
+  30% {
+    transform: translate(-5%, -10%);
+  }
+  40% {
+    transform: translate(-15%, -20%);
+  }
+  50% {
+    transform: translate(-5%, -10%);
+  }
+  60% {
+    transform: translate(-15%, -20%);
+  }
+  70% {
+    transform: translate(-5%, -10%);
+  }
+  80% {
+    transform: translate(-15%, -20%);
+  }
+  90% {
+    transform: translate(-5%, -10%);
+  }
+  100% {
+    transform: translate(-15%, -20%);
+  }
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Videonun boyutunu korumak için ekledik */
+}
+
+.main-title {
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.main-title h1 {
+  color: white;
+  color: #fff;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+  margin-bottom: -0.05em;
+  padding-right: 10vw;
+  font-size: 14vw;
+  font-weight: 500;
+  line-height: 1;
+}
+
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+.content1 {
+  opacity: 0;
+  filter: blur(20px);
+}
+
+.content2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.img-cover {
+  border-radius: 5px;
+  width: 360px;
+  height: 560px;
+  display: flex;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.img-cover img {
+  border-radius: 5px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: all 0.6s;
+}
+
+.img-cover img:hover {
+  scale: 1.1;
+  opacity: 0.6;
+}
