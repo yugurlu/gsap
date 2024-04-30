@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: none;
+}
+
+@font-face {
+  font-family: "Monument Extended";
+  src: url("../fonts/MonumentExtended-Regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  font-family: "Monument Extended";
+  font-size: 24px;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.animation:after {
+  content: "";
+  z-index: 1;
+  opacity: 0.06;
+  background-image: url(https://assets-global.website-files.com/651d15fb8f27f4a03c14ae88/651d15fb8f27f4a03c14afa4_5d8424ac4ffed73f4d72846e_5c06f51d6e75c933fe05c728_giphy.gif);
+  background-position: 0 0;
+  background-attachment: fixed;
+  position: fixed;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.preloader {
+  width: 100%;
+  height: 100vh;
+  background: #101010;
+  overflow: hidden;
+  position: fixed;
+}
+
+.pace {
+  text-transform: uppercase;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: none;
+  height: 2px;
+  width: 400px;
+  background: #292929;
+  text-align: center;
+  color: rgb(255, 234, 204);
+}
+
+.pace-progress {
+  text-transform: uppercase;
+  pointer-events: none;
+  user-select: none;
+  z-index: 2;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: none;
+  height: 2px;
+  width: 0px;
+  max-width: 400px;
+  background: rgb(255, 234, 204);
+  text-align: center;
+}
+
+p {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -150%);
+}
