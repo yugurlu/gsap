@@ -23,8 +23,8 @@ h1 {
 
 p {
   letter-spacing: -0.015em;
-  font-size: 3.4vw;
   line-height: 1.25;
+  font-size: 3.4vw;
 }
 
 nav {
@@ -171,7 +171,7 @@ nav a {
 video {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Videonun boyutunu korumak için ekledik */
+  object-fit: cover;
 }
 
 .main-title {
